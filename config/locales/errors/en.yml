@@ -1,0 +1,17 @@
+en:
+  restaurant:
+    not_found:
+      error_code: 1001
+      message: "Restaurant not found"
+  shift:
+    not_found:
+      error_code: 2001
+      message: "Shift not found"
+  table:
+    not_found:
+      error_code: 3001
+      message: "Table not found"
+  reservation:
+    not_found:
+      error_code: 4001
+      message: "Reservation not found"

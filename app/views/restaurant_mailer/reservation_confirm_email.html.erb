@@ -1,0 +1,35 @@
+<h3> New Reservation </h3>
+<br/>
+Hi <%= @reservation.restaurant.name %>,
+
+Congratulations!! A new reservation for your restaurant, following are the details:
+<br/>
+<br/>
+<table>
+  <tbody>
+    <tr>
+      <td><b>ID</b></td>
+      <td><%= @reservation.id %></td>
+    </tr>
+    <tr>
+      <td><b>Guest</b></td>
+      <td><%= @reservation.guest.name.titleize %> ( <%= @reservation.guest.email %> )</td>
+    </tr>
+    <tr>
+      <td><b>Shift</b></td>
+      <td><%= @reservation.shift.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Table</b></td>
+      <td><%= @reservation.table.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Time</b></td>
+      <td><%= @reservation.time %></td>
+    </tr>
+    <tr>
+      <td><b>Total Guests&nbsp;&nbsp;&nbsp;</b></td>
+      <td><%= @reservation.guest_count %></td>
+    </tr>
+  </tbody>
+</table>

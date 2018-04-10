@@ -1,0 +1,47 @@
+<h3> #<%= @reservation.id %> - Reservation Updated </h3>
+<br/>
+Hi <%= @reservation.restaurant.name %>,
+
+A reservation has been updated, following are the details:
+<br/>
+<br/>
+<table>
+  <tbody>
+    <tr>
+      <td><b>ID</b></td>
+      <td><%= @reservation.id %></td>
+    </tr>
+    <tr>
+      <td><b>Guest</b></td>
+      <td><%= @reservation.guest.name.titleize %> ( <%= @reservation.guest.email %> )</td>
+    </tr>
+    <tr>
+      <td><b>Shift</b></td>
+      <td><%= @reservation.shift.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Table</b></td>
+      <td><%= @reservation.table.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Time</b></td>
+      <td>
+        <% if @changed_attributes["time"].present? %>
+          <strike><%= @changed_attributes["time"] %></strike> <%= @reservation.time %>
+        <% else %>
+          <%= @reservation.time %>
+        <% end %>
+      </td>
+    </tr>
+    <tr>
+      <td><b>Total Guests&nbsp;&nbsp;&nbsp;</b></td>
+      <td>
+        <% if @changed_attributes["guest_count"].present? %>
+          <strike><%= @changed_attributes["guest_count"] %></strike> <%= @reservation.guest_count %>
+        <% else %>
+          <%= @reservation.guest_count %>
+        <% end %>
+      </td>
+    </tr>
+  </tbody>
+</table>

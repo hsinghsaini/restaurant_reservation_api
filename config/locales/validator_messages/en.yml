@@ -1,0 +1,17 @@
+en:
+  mongoid:
+    errors:
+      models:
+        reservation:
+          attributes:
+            guest_count:
+              invalid_count: must be between %{minimum} and %{maximum}
+            time:
+              invalid_time_slot: must be between %{start} and %{end}
+      messages:
+        invalid_time: invalid format entered
+        must_greater_than: must be greater than %{minimum}
+        must_less_than: must be less than %{maximum}
+
+
+

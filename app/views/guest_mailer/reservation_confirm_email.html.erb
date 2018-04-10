@@ -1,0 +1,31 @@
+<h3> Reservation Successfull </h3>
+<br/>
+Hi <%= @reservation.guest.name %>,
+
+Thank you for your reservation, following are the details:
+<br/>
+<br/>
+<table>
+  <tbody>
+    <tr>
+      <td><b>Restaurant</b></td>
+      <td><%= @reservation.restaurant.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Shift</b></td>
+      <td><%= @reservation.shift.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Table</b></td>
+      <td><%= @reservation.table.name.titleize %></td>
+    </tr>
+    <tr>
+      <td><b>Time</b></td>
+      <td><%= @reservation.time %></td>
+    </tr>
+    <tr>
+      <td><b>Total Guests&nbsp;&nbsp;&nbsp;</b></td>
+      <td><%= @reservation.guest_count %></td>
+    </tr>
+  </tbody>
+</table>
