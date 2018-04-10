@@ -48,4 +48,5 @@ gem 'email_validator'
 gem 'phonelib'
 gem 'active_model_serializers', '~> 0.10.0'
 # gem 'sidekiq'
+gem 'daemons', group: [:production]
 gem 'delayed_job_mongoid'

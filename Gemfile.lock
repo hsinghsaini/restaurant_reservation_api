@@ -51,6 +51,7 @@ GEM
       activesupport
     concurrent-ruby (1.0.5)
     crass (1.0.4)
+    daemons (1.2.5)
     delayed_job (4.1.4)
       activesupport (>= 3.0, < 5.2)
     delayed_job_mongoid (2.3.0)
@@ -171,6 +172,7 @@ PLATFORMS
 DEPENDENCIES
   active_model_serializers (~> 0.10.0)
   byebug
+  daemons
   delayed_job_mongoid
   dotenv-rails
   email_validator
