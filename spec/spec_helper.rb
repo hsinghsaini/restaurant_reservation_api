@@ -93,4 +93,26 @@ RSpec.configure do |config|
   # as the one that triggered the failure.
   Kernel.srand config.seed
 =end
+
+  # Configuration for database cleaner
+  require 'database_cleaner'
+
+  config.before(:suite) do
+    DatabaseCleaner.orm = 'mongoid'
+    DatabaseCleaner.strategy = :truncation
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    DatabaseCleaner.clean
+  end
+
+  # Configuration for FactoryBot
+  require 'factory_bot'
+
+  config.include FactoryBot::Syntax::Methods
+
 end

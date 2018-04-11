@@ -13,9 +13,10 @@ class Reservation
   accepts_nested_attributes_for :guest
 
   validates_presence_of :time, :guest_count, :guest
+  validates_numericality_of :guest_count, minimum: 1, if: Proc.new {|res| res.guest_count.present? }
   validates :time_before_type_cast, time: true
-  validate :table_guest_count, if: :table
-  validate :shift_time, if: :shift
+  validate :table_guest_count, if: [:table, Proc.new {|res| res.guest_count.present? }]
+  validate :shift_time, if: [:shift, Proc.new {|res| res.time.present? }]
 
   def shift
     @shift ||= restaurant.shifts.find(id: shift_id)

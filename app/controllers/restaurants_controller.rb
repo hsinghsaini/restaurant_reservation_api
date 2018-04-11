@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, only: [:show, :update, :destroy, :reservations]
+  before_action :set_restaurant, only: [:show, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
@@ -31,10 +31,6 @@ class RestaurantsController < ApplicationController
 
   def destroy
     @restaurant.destroy
-  end
-
-  def reservations
-    render json: @restaurant.reservations, status: :ok
   end
 
   private

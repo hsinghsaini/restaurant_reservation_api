@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :restaurants do
     resources :shifts
     resources :tables
-    resources :reservations, except: [:index]
+    resources :reservations
     member do
       get 'reservations'
     end

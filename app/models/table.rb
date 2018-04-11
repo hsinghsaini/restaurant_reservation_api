@@ -9,6 +9,6 @@ class Table
 
   validates_presence_of :name, :minimum_guests, :maximum_guests
   validates_uniqueness_of :name, case_sensitive: false
-  validates_numericality_of :minimum_guests, greater_than: 0
-  validates_numericality_of :maximum_guests, greater_than: :minimum_guests
+  validates_numericality_of :minimum_guests, greater_than: 0, if: Proc.new { |table| table.minimum_guests.present? }
+  validates_numericality_of :maximum_guests, greater_than: :minimum_guests, if: Proc.new {|table| table.minimum_guests.present? }
 end

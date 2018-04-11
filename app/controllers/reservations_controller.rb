@@ -2,6 +2,12 @@ class ReservationsController < ApplicationController
   before_action :set_restaurant
   before_action :set_reservation, only: [:show, :update, :destroy]
 
+  def index
+    @reservations = @restaurant.reservations
+
+    render json: @reservations
+  end
+
   def show
     render json: @reservation
   end
