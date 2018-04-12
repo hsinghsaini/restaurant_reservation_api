@@ -249,3 +249,6 @@ Base Path : https://restaurant-reservation-api.herokuapp.com/
     </ul>
   </li>
 </ul>
+<br>
+
+<strong>Postman collection link for all APIs: </strong>https://www.getpostman.com/collections/c874107058b288d51bfc
