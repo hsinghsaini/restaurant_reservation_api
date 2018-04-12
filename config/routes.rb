@@ -4,9 +4,6 @@ Rails.application.routes.draw do
     resources :shifts
     resources :tables
     resources :reservations
-    member do
-      get 'reservations'
-    end
   end
 
   root "restaurants#index"
