@@ -8,4 +8,6 @@ Rails.application.routes.draw do
       get 'reservations'
     end
   end
+
+  root "restaurants#index"
 end

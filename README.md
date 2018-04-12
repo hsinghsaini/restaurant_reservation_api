@@ -28,6 +28,7 @@
   <li><code>bundle install</code></li>
   <li>To run the server: <code>rails server</code></li>
   <li>To run delayed_job (for sending emails): <code>rails jobs:work</code></li>
+  <li>To run tests, run <code>rspec .</code></li>
 </ul>
 <br>
 
