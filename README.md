@@ -1,6 +1,6 @@
 # Restaurant Reservation Api
 
-**Heroku Link - https://restaurant-reservation-api.herokuapp.com/
+**Heroku Link - https://restaurant-reservation-api.herokuapp.com/<br>
 **Postman Collection Link - https://www.getpostman.com/collections/c874107058b288d51bfc
 
 <br>
