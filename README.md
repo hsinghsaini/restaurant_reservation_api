@@ -12,14 +12,14 @@
 <strong>Run the application in development/test</strong>
 <br>
 <ul>
-  <li>MongoDB must be installed at local or udate config/mongoid.yml accordingly</li>
+  <li>MongoDB must be installed at local or update config/mongoid.yml accordingly</li>
   <li>
     Create a <code>.env</code> file in the root directory. Add the following configuration to it:
     <br>
     ** Change gmail settings to allow signin from less secure apps
     <ul>
-      <li>SMTP_USER_NAME = <gmail email> </li>
-      <li>SMTP_PASSWORD = <gmail password> </li>
+      <li>SMTP_USER_NAME = "gmail email" </li>
+      <li>SMTP_PASSWORD = "gmail password" </li>
     </ul>
   </li>
   <li><code>bundle install</code></li>
